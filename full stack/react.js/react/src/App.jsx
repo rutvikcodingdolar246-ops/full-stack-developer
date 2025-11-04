@@ -1,10 +1,14 @@
 
 
-
-
+import"./components/Netflix.css"
+import NetflixSeries  from "./components/NetflixSeries"
 export const App = () =>{
-  return 
-  <h1>Rutvik</h1>
-};
 
-
+  return(
+   <section className="container">
+      <h1 className="card-heading">List of best Netflix Series</h1>
+      <NetflixSeries/>
+   </section>
+    
+  )
+}
