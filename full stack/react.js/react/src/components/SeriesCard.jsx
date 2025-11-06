@@ -44,8 +44,7 @@ export const SeriesCard = ({data}) => {
       const ratingClass = rating >= 8.5 ? styles.super_hit : styles.average; 
       
       
-
-
+// Tailwind CSS add to file 
   return (
     <li className={styles.card}>
       <div>
@@ -132,4 +131,5 @@ export const SeriesCard = ({data}) => {
 // 1: This is a styled component, which is a React component created using styled-components. It is both a React component and a styled component. As a React component, it can be used in JSX. As a styled component, it has styles directly attached to it.
 
 // 2: styled is an object provided by the library, and button is a method on that object.
+
 
