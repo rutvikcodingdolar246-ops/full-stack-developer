@@ -5,32 +5,64 @@ export const SeriesCard = ({data}) => {
   const { img_url, name, rating, description, genre, cast, watch_url } =
     data;
 
-    const btn_style = {    
-          padding:"1.2rem 2.4rem",
-          border: "none",
-          fontSize:"1.6rem",
-          backgroundColor: `${rating >= 8.5 ? "#7dcea0" : "#f7dc6f"}`,
-          color: "var(--bg-color)",
-        }
+    // const btn_style = {    
+    //       padding:"1.2rem 2.4rem",
+    //       border: "none",
+    //       fontSize:"1.6rem",
+    //       backgroundColor: `${rating >= 8.5 ? "#7dcea0" : "#f7dc6f"}`,
+    //       color: "var(--bg-color)",
+    //     }
+
+
+    // const ButtonThapa = styled.button({
+    //       padding:"1.2rem 2.4rem",
+    //       border: "none",
+    //       fontSize:"1.6rem",
+    //       backgroundColor: `${rating >= 8.5 ? "#7dcea0" : "#f7dc6f"}`,
+    //       color: "var(--bg-color)",
+    //       fontWeight: "bold",
+    //       cursor: "pointer",
+    // });
+
+//! tapaleliterse 
+
+     const ButtonThapa = styled.button `
+          padding:1.2rem 2.4rem;
+          border: none;
+          font-size:1.6rem;
+          background-color: ${(props) => props.rating >= 8.5 ? "#7dcea0" : "#f7dc6f"};
+          color: var(--bg-color);
+          font-weight: bold;
+          cursor: pointer;
+    `;
+
+    const Rating = styled.h3`
+      font-size: 1.6rem;
+      color: 7dcea0;
+      text-transform: capitalize;`
     
-      const ratingClass = rating >= 8.5 ? styles.super_hit : styles.average;  
+      const ratingClass = rating >= 8.5 ? styles.super_hit : styles.average; 
+      
+      
+
 
   return (
     <li className={styles.card}>
       <div>
       <img src={img_url} alt="Queen of Tears poster" width="40%" height="40%" />
        </div>
-      <div className={styles["card-content"]}>
+      <div className="flex flex-col gap-6 py-6 px-5 text-cyan-300">
       <h1>Name: {name}</h1>
       <h3>Rating: <span className={`${styles.rating} ${ratingClass}`}>{rating}</span></h3>
       
-      <p>Summary: {description}</p>   
+      <p className="text-3xl font-bold underline">Summary: {description}</p>   
       {/* inline css  */}
 
       <p>Genre: {genre}</p>
       <p>Cast:{cast}</p>
       <a href={watch_url} target="_blank">
-        <button style={btn_style}>Watch Now</button>
+        {/* <button style={btn_style}>Watch Now</button> */}
+        <ButtonThapa rating={rating}>Watch Now</ButtonThapa>
       </a>
       </div>
     </li>
@@ -88,3 +120,16 @@ export const SeriesCard = ({data}) => {
 // Dot Notation: styles.card-content will not work because . expects a valid identifier, which cannot contain hyphens.
 
 // Bracket Notation: styles['card-content'] correctly accesses the class name from the imported styles object.
+
+
+
+//! Styled Components
+
+
+// const Button = styled.button`
+//   color: grey;
+// `;
+// 1: This is a styled component, which is a React component created using styled-components. It is both a React component and a styled component. As a React component, it can be used in JSX. As a styled component, it has styles directly attached to it.
+
+// 2: styled is an object provided by the library, and button is a method on that object.
+
