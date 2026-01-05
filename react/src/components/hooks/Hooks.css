@@ -1,0 +1,223 @@
+/* Hooks.css */
+
+/* ---------------------------
+   Container
+---------------------------- */
+/* .container.short-container {
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #1c1f26;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: Arial, sans-serif;
+} */
+
+/* ---------------------------
+   Title
+---------------------------- */
+/* .container.short-container h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #00eaff;
+} */
+
+/* ---------------------------
+   Paragraph
+---------------------------- */
+/* .container.short-container p {
+  font-size: 1.2rem;
+  background: #232a34;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+} */
+
+/* ---------------------------
+   Grid Buttons
+---------------------------- */
+/* .grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+} */
+
+/* ---------------------------
+   Buttons
+---------------------------- */
+/* .grid-three-cols button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #00eaff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+} */
+
+/* .grid-three-cols button:hover {
+  background: #009bb0;
+  transform: scale(1.05);
+} */
+/* -----------------------------------
+   Counter Component Styling
+------------------------------------ */
+
+/* Main container */
+.container.state-container {
+  width: 60%;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #1c1f26;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.container.state-container h1 {
+  font-size: 2rem;
+  color: #00eaff;
+  margin-bottom: 1rem;
+}
+
+/* Count label */
+.container.state-container p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Increment Button */
+.container.state-container .s {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background: #00eaff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.container.state-container .s:hover {
+  background: #009bb0;
+  transform: scale(1.07);
+}
+
+/* Optional hover glow effect */
+.container.state-container .s:active {
+  transform: scale(1.04);
+}
+
+button {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+
+
+
+/* Challenge  */
+
+
+/* Container */
+.container.state-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.container.state-container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #222;
+}
+
+/* Count number */
+.container.state-container span {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 22px;
+}
+
+/* Input field */
+.container.state-container input[type="number"] {
+  width: 80px;
+  padding: 8px 12px;
+  margin-top: 12px;
+  font-size: 18px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.container.state-container input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+/* Grid buttons */
+.grid-three-cols {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Buttons */
+.grid-three-cols button {
+  padding: 10px 5px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.grid-three-cols button:hover {
+  background: #0056b3;
+}
+
+.grid-three-cols button:nth-child(2) {
+  background: #dc3545;
+}
+
+.grid-three-cols button:nth-child(2):hover {
+  background: #b02a37;
+}
+
+.grid-three-cols button:nth-child(3) {
+  background: #6c757d;
+}
+
+.grid-three-cols button:nth-child(3):hover {
+  background: #545b62;
+}

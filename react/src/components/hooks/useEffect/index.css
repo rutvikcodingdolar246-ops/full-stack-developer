@@ -1,0 +1,163 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.effect-container {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 40px 60px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.effect-container h1 {
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+.effect-container p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.effect-container button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #ffdd57;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.effect-container button:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.effect-container {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 50px 70px;
+  border-radius: 18px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+
+  /* 🔥 Fix alignment */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}  */
+
+/* Title */
+/* .effect-container h1 {
+  font-size: 34px;
+  letter-spacing: 1px;
+} */
+
+/* Count text */
+/* .effect-container p {
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+/* Button */
+/* .effect-container button {
+  margin-top: 10px;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 30px;
+  background: #ffdd57;
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+} */
+
+/* .effect-container button:hover {
+  background: white;
+  transform: scale(1.08);
+} */
+/* Page background */
+/* body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+} */
+
+/* Center container */
+/* .container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* Counter Card */
+/* .counter {
+  background: #111;
+  padding: 40px 60px;
+  border-radius: 18px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  width: 340px;
+} */
+
+/* Name text */
+/* .counter p {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #aaa;
+} */
+
+/* Odometer number */
+/* .odometer {
+  margin: 20px 0;
+  font-size: 70px;
+  font-weight: bold;
+  color: #ff0000;
+  background: #000;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 12px rgba(255, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+}  */
+
+/* Title text */
+/* .title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+} */
