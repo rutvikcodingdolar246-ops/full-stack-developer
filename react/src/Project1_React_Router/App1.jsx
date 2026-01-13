@@ -2,11 +2,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./page/Home";
 import { About } from "./page/About";
 import { Movie } from "./page/Movie";
-import { Contact } from "./page/Contact";
+import { Contact, contactData } from "./page/Contact";
 import AppLayout from "./components/layout/AppLayout";
 import { ErrorPage } from "./page/ErrorPage";
 import { getMoviesData } from "./api/GetAPIData";
-import "./components/layout/Ui/project.css"
+import "./components/layout/Ui/project.css";
 import { MovieDetails } from "./components/layout/Ui/MovieDetails";
 import { getMovieDetails } from "./api/GetMovieDetails";
 
@@ -15,9 +15,9 @@ const App1 = () => {
     {
       path: "/",
       element: <AppLayout />,
-      errorElement : <ErrorPage/>,
+      errorElement: <ErrorPage />,
 
-      children: [   
+      children: [
         {
           path: "/",
           element: <Home />,
@@ -29,17 +29,18 @@ const App1 = () => {
         {
           path: "/movie",
           element: <Movie />,
-          loader:getMoviesData,
+          loader: getMoviesData,
         },
-         {
+        {
           path: "/movie/:movieID",
-          element: <MovieDetails/>,
+          element: <MovieDetails />,
           loader: getMovieDetails,
-         
         },
         {
           path: "/contact",
           element: <Contact />,
+          action: contactData,
+          
         },
       ],
     },
