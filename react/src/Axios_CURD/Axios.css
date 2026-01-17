@@ -1,0 +1,89 @@
+body {
+  background-color: #17202a;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Urbanist", sans-serif;
+}
+
+p,
+a,
+li,
+input {
+  font-size: 1.6rem;
+  letter-spacing: 0.12rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+button {
+  padding: 0.8rem 3.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 0;
+  background-color: hsl(160, 80%, 48%);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  background-color: hsl(160, 80%, 40%);
+  box-shadow: rgb(9, 172, 115) 0px 7px 19px 0px;
+}
+
+.main-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* FORM */
+.section-form {
+  padding: 1.6rem;
+  background-color: #212f3d;
+  border-radius: 0.6rem;
+  margin: 3.2rem auto;
+}
+
+.section-form form {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.section-form input {
+  width: 24rem;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: #212f3d;
+}
+
+/* POSTS */
+.section-post {
+  width: 90%;
+}
+
+.section-post ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+.section-post li {
+  background-color: #212f3c;
+  padding: 1.6rem;
+  border-radius: 0.3rem;
+  border-left: 0.3rem solid #fff;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  margin-top: 1.2rem;
+}
+
+.btn-delete:hover {
+  box-shadow: rgb(167, 54, 13) 0px 7px 19px 0px;
+}
