@@ -62,3 +62,69 @@
 // client available via React's context API so that all the components in the tree can
 
 // the useQuery, useMutation, and other hooks provided by react-query. 
+
+
+
+
+
+//! gcTime – (Garbage Collection Time)
+
+// In React Query v5, the cacheTime option in React Query has been renamed to gcTime.
+
+// When you use React Query to get data, it saves the results in a local cache. This means if you ask for the same data again, React Query will give you the saved data instead of making another API request.
+// The cache updates automatically if the data changes, so you always get the latest information.
+
+// Use Case
+
+// Imagine you're fetching a list of users. If you go back to the same page, React Query will show the saved list from the cache instead of reloading it from the server, making your app faster.
+// If a new user is added, React Query will automatically update the list.
+
+// Default Behavior
+
+// By default, inactive queries are garbage collected after 5 minutes.
+// This means that if a query is not being used for 5 minutes, the cache for that query will be cleaned up.
+
+// If you want, I can als
+
+
+
+
+//! staleTime
+
+// In React Query, staleTime is a configuration option that determines how long fetched data is considered fresh before it needs to be refetched.
+
+// How it works
+// Fresh Data
+
+// When data is initially fetched or updated, it is considered fresh.
+
+// Stale Data
+
+// After the staleTime duration (specified in milliseconds) elapses, the data is considered stale.
+
+// Default Value
+
+// The default staleTime is 0, meaning data becomes stale immediately after being fetched.
+
+// This ensures data is always up to date but can lead to frequent refetching.
+
+
+
+
+//! Polling
+
+// In React Query, polling refers to the technique of fetching data from an API at regular intervals to keep the UI up to date with the latest information.
+// This is especially useful for scenarios where data changes frequently and you want to display real-time updates without requiring the user to manually refresh the page.
+
+// refetchInterval option
+
+// The simplest way to enable polling is to pass the refetchInterval option to the useQuery hook.
+// This option specifies the interval (in milliseconds) at which React Query should automatically refetch the data.
+
+// refetchInterval: 5000 // refetch every 5 seconds
+
+// Background polling
+// refetchIntervalInBackground
+
+
+// If you want to continue polling even when the component is not mounted, or when the user switches to another browser tab, you can use the refetchIntervalInBackground option. 

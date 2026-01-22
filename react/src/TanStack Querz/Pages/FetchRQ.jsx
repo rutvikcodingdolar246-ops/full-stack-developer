@@ -6,6 +6,7 @@ export const FetchRQ = () => {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
+  
   });
 
   if (isLoading) return <p>Loading...</p>;  
