@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts } from "../API/api";
+import { NavLink } from "react-router-dom";
 
 export const FetchRQ = () => {
 
@@ -19,8 +20,11 @@ export const FetchRQ = () => {
       <ul className="section-accordion">
         {data.map(({ id, title, body }) => (
           <li key={id}>
+            <NavLink to={`/rq/${id}`}>
+            <p>{id}</p>
             <p>{title}</p>
             <p>{body}</p>
+            </NavLink>
           </li>
         ))}
       </ul>

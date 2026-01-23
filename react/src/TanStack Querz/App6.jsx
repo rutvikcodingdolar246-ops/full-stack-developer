@@ -6,6 +6,7 @@ import { FetchOld } from "./Pages/FetchOld";
 import { FetchRQ } from "./Pages/FetchRQ";
 import { MainLayout } from "./components/Layout/mainLayout";
 import "./components/Layout/UI/tan1.css";
+import { FetchIndv } from "./components/Layout/UI/FetchIndv";
 
 // Create Query Client
 const queryClient = new QueryClient();
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "rq",
         element: <FetchRQ />,
+      },
+      {
+        path: "rq/:id",
+        element: <FetchIndv/>,
       },
     ],
   },
