@@ -127,4 +127,50 @@
 // refetchIntervalInBackground
 
 
-// If you want to continue polling even when the component is not mounted, or when the user switches to another browser tab, you can use the refetchIntervalInBackground option. 
+// If you want to continue polling even when the component is not mounted, or when the user switches to another browser tab, you can use the refetchIntervalInBackground option.
+
+
+
+
+
+//! useMutation
+
+// The useMutation hook is part of React Query and is used for operations that
+// modify data, like Create, Update, and Delete (CRUD operations).
+
+// Syntax: const mutation = useMutation( mutationFn, {
+// // Optional configuration options
+
+// });
+
+// We can provide various configuration options to customize the behavior of the
+
+// mutation, such as:
+
+// onSuccess: A callback function that runs when the mutation is successful.
+
+// onError: A callback function that runs if the mutation fails.
+
+// onSettled: A callback function that runs regardless of success or failure.
+
+// mutationKey: A unique key to identify the mutation in the cache. 
+
+
+
+
+// The mutate() function is used to execute the mutation in React Query.
+// The process is the same whether you're:
+
+// Deleting data
+
+// Updating data
+
+// Creating new data
+
+// When you call .mutate(), it tells React Query to run the mutation function defined
+
+// inside the useMutation hook. This is needed because the mutation is an action
+
+// that changes data, unlike queries, which are used to fetch data and are often
+
+// auto-executed.

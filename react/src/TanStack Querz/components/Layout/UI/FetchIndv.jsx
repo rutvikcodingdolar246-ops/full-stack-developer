@@ -1,27 +1,32 @@
-import { useQuery } from "@tanstack/react-query"
-import { fetchInvPost } from "../../../API/api"
-import { useParams } from "react-router-dom"
+import { useQuery } from "@tanstack/react-query";
+import { fetchInvPost } from "../../../API/api";
+import { NavLink, useParams } from "react-router-dom";
 
-export const FetchIndv = () =>{
-   
-   const {id} = useParams();
+export const FetchIndv = () => {
 
-    const {data, isPending, isError, error}= useQuery({
-        queryKey:["post"],
-        queryFn:() =>fetchInvPost(id),
-    })
-    if (isLoading) return <p>Loading...</p>;  
-    if (isError) return <p>Error :{error.message ||  "loading posts!"}</p>;
-     return (
-     <div>
-     <ul>
-        <li>
-            <p>ID:{data[]}</p>
-        </li>
-     </ul>
-     </div>
+    
+  const { id } = useParams();
 
-     )
-}
+  const { data, isPending, isError, error } = useQuery({
+    queryKey: ["post", id],
+    queryFn: () => fetchInvPost(id),
+  });
+  if (isPending) return <p>Loading...</p>;
+  if (isError) return <p>Error :{error.message || "loading posts!"}</p>;
+  return (
+    <div className="section-accordion">
+      <h1>Post Details Number - {id}</h1>
+      <li>
+        <p>ID:{data.id}</p>
+        <p>Title:{data.title}</p>
+        <p>Body:{data.body}</p>
+      </li>
+      <NavLink to="/rq">
+        <button>Go Back</button>
+      </NavLink>
+      
+    </div>
+  );
+};
 
-13.35
+
