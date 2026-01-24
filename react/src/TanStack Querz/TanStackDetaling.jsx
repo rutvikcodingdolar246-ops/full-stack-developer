@@ -174,3 +174,19 @@
 // that changes data, unlike queries, which are used to fetch data and are often
 
 // auto-executed.
+
+
+//! Scroll Events
+
+// window.innerHeight: The height of the visible part of the webpage (the viewport).
+
+// window.scrollY: The amount of pixels the user has scrolled down the page.
+
+// document.documentElement.scrollHeight: The total height of the webpage,
+// including the part not visible without scrolling.
+
+// When the sum of window.innerHeight and window.scrollY is approximately equal
+
+// to document.documentElement.scrollHeight - 1, the user is near the bottom of the
+
+// page.
