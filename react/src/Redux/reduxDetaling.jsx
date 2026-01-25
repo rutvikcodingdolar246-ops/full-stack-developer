@@ -143,3 +143,75 @@
 // We use a switch statement to check the action's type.
 // Based on the action type, the reducer updates the state.
 
+//! Redux Store - syntax
+
+// import { createStore } from "redux";
+// const store = createStore(reducer);
+
+// The createStore method creates the Redux store using
+// a reducer function that handles how the state changes
+// in response to actions.
+
+
+//! Dispatch an Action
+// dispatch() is used to send actions to the Redux store. An action describes
+// what change you want to make to the state (such as adding a task).
+
+// store. dispatch({ type: "ACTION_TYPE", payload: data });
+
+// dispatch() is used to send actions to the Redux store. An action describes
+// what change you want to make to the state (such as adding a task).
+
+
+//! getState(
+// getState() retrieves the current state of the Redux store.
+
+// This is useful for accessing the state after it has been updated or
+
+// to monitor changes.
+
+
+//!Redux Action
+
+// An action is an object that tells Redux what we want to do.
+// It must have a type property that describes the action.
+
+
+//! Action Creator
+
+// An action creator is a function that creates an action object.
+// This makes it easier to create actions with different data.
+
+
+//! Connect React +
+// Redux
+
+// To use Redux in a React app, we need to connect Redux's store and actions to
+// React components. This allows components to access the global state and
+// dispatch actions.
+
+
+//! Steps to Connect
+
+// Step 1: Install react-redux
+
+// npm install react-redux
+
+// Step 2: Wrap the App with Provider:
+// Use the Provider component to pass the Redux store to the entire app.
+
+
+//!Access Redux State in
+// React using useSelector
+
+// Use the useSelector hook to read data from the Redux store.
+
+// const count = useSelector(state => state.property);
+
+// Selector function: We define a selector function that takes the entire Redux
+// store state as an argument and returns the specific piece of data we need.
+
+//! Dispatch Actions in React
+// using useDispatch
+
+// Use the useDispatch hook to dispatch actions from a React component.
