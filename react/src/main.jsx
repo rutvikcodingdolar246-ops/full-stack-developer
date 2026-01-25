@@ -2,7 +2,7 @@
 import { createRoot } from 'react-dom/client'
 // import App1 from './projects/Project1_React_Router/App1'
 import "./App.css"
-import  App6  from './TanStack Querz/App6'
+import { App7 } from './Redux/App7'
 
 
 
@@ -11,6 +11,6 @@ import  App6  from './TanStack Querz/App6'
 
 createRoot(document.getElementById('root')).render(
  
-<App6/>
+<App7/>
  
 )
