@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #153677, #4e085f);
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Todo Box */
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+/* Heading */
+.todo-app h1 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Input Row */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+/* Input */
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Button */
+button {
+  border: none;
+  outline: none;
+  padding: 16px 40px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+button:hover {
+  background: #e04b39;
+}
+
+/* List */
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 10px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Task text */
+ul li p {
+  flex: 1;
+}
+
+/* Delete icon */
+.icon-style {
+  color: #ff5945;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.icon-style:hover {
+  color: #d43c2c;
+}
