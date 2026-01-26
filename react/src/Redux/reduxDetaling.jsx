@@ -215,3 +215,12 @@
 // using useDispatch
 
 // Use the useDispatch hook to dispatch actions from a React component.
+
+
+
+
+//! Redux Thunk
+
+// Redux Thunk is middleware that allows you to write action creators that return a function instead of an action. This function can perform asynchronous logic (like API requests) and dispatch actions after the operation is complete (e.g., fetching tasks and then dispatching them to the store).
+
+// When you return a function from an action creator, Redux Thunk provides the dispatch function as an argument. This allows you to manually dispatch other actions (e.g., when an API call succeeds or fails).
