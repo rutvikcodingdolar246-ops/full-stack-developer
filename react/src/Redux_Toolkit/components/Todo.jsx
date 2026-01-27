@@ -6,7 +6,10 @@ import { addTask, deleteTask, fetchTask } from "../store";
 export const Todo = () => {
   const [task, setTask] = useState("");
 
-  const tasks = useSelector((state) => state.taskReducer.task);
+  const { task: tasks, isLoading } = useSelector(
+    (state) => state.taskReducer
+  );
+
   const dispatch = useDispatch();
 
   const handleFormSubmit = (e) => {
@@ -37,15 +40,24 @@ export const Todo = () => {
             value={task}
             onChange={(e) => setTask(e.target.value)}
           />
-          <button>Add Task</button>
+          <button type="submit">Add Task</button>
         </form>
 
-        <button onClick={handleFetchTasks}>Fetch Tasks</button>
+        <button onClick={handleFetchTasks} disabled={isLoading}>
+          {isLoading ? "Loading..." : "Fetch Tasks"}
+        </button>
 
         <ul>
+          {tasks.length === 0 && !isLoading && (
+            <p>No tasks yet 👀</p>
+          )}
+
           {tasks.map((curTask, index) => (
             <li key={index}>
-              <span>{index + 1}. {curTask}</span>
+              <span>
+                {index + 1}. {curTask}
+              </span>
+
               <MdDeleteForever
                 style={{ cursor: "pointer", color: "red" }}
                 onClick={() => handleTaskDelete(index)}

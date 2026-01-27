@@ -1,103 +1,52 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// Action Types
-const ADD_TASK = "task/add";
-const DELETE_TASK = "task/delete";
-const FETCH_TASKS = "task/fetch";
-
-// Initial State
-const initialState = {
-  task: [],
-  isLoading: false,
-};
-
-// Reducer
-const taskReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_TASK:
-      return {
-        ...state,
-        task: [...state.task, action.payload],task: [...state.task, action.payload],
-      };
-
-    case DELETE_TASK:
-      return {
-        ...state,
-        task: state.task.filter((_, index) => index !== action.payload),
-      };
-
-    case FETCH_TASKS:
-      return {
-        ...state,
-        task: [...state.task, ...action.payload],
-      };
-
-    default:
-      return state;
-  }
-};
-
-// Action Creators
-export const addTask = (data) => ({
-  type: ADD_TASK,
-  payload: data,
-});
-
-export const deleteTask = (id) => ({
-  type: DELETE_TASK,
-  payload: id,
-});
-
-// Thunk (Async Action)
-export const fetchTask = () => {
-  return async (dispatch) => {
-    try {
-      const res = await fetch(
-        "https://jsonplaceholder.typicode.com/todos?_limit=3"
-      );
-      const data = await res.json();
-
-      dispatch({
-        type: FETCH_TASKS,
-        payload: data.map((item) => item.title),
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
-};
-
-
-// RTK slice
-
-
-const taskReducer = createSlice({
-  name:"task",
-  initialState,
-  reducers:{
-  addTask(state,action){
-    state.task.push(action.payload);
-    
-  },
-  deleteTask(state,action){
-    state.task = state.task.filter(
-      (curTask, index) => index === action.payload
+// Async Thunk
+export const fetchTask = createAsyncThunk(
+  "task/fetch",
+  async () => {
+    const res = await fetch(
+      "https://jsonplaceholder.typicode.com/todos?_limit=3"
     );
-  },
-  
+    const data = await res.json();
+    return data.map((item) => item.title);
   }
-}) 
+);
 
+const taskSlice = createSlice({
+  name: "task",
+  initialState: {
+    task: [],
+    isLoading: false,
+  },
+  reducers: {
+    addTask(state, action) {
+      state.task.push(action.payload);
+    },
+    deleteTask(state, action) {
+      state.task = state.task.filter(
+        (_, index) => index !== action.payload
+      );
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchTask.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchTask.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.task.push(...action.payload);
+      })
+      .addCase(fetchTask.rejected, (state) => {
+        state.isLoading = false;
+      });
+  },
+});
 
+export const { addTask, deleteTask } = taskSlice.actions;
 
-
-const {addTask,deleteTask} = taskReducer.action;
-// Store
 export const store = configureStore({
   reducer: {
-    taskReducer: ,
+    taskReducer: taskSlice.reducer,
   },
 });
-
-
-console.log(store.dispatch(addTask("Bye ")))
