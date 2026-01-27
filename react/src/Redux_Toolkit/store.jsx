@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 // Action Types
 const ADD_TASK = "task/add";
@@ -17,7 +17,7 @@ const taskReducer = (state = initialState, action) => {
     case ADD_TASK:
       return {
         ...state,
-        task: [...state.task, action.payload],
+        task: [...state.task, action.payload],task: [...state.task, action.payload],
       };
 
     case DELETE_TASK:
@@ -67,9 +67,37 @@ export const fetchTask = () => {
   };
 };
 
+
+// RTK slice
+
+
+const taskReducer = createSlice({
+  name:"task",
+  initialState,
+  reducers:{
+  addTask(state,action){
+    state.task.push(action.payload);
+    
+  },
+  deleteTask(state,action){
+    state.task = state.task.filter(
+      (curTask, index) => index === action.payload
+    );
+  },
+  
+  }
+}) 
+
+
+
+
+const {addTask,deleteTask} = taskReducer.action;
 // Store
 export const store = configureStore({
   reducer: {
-    taskReducer,
+    taskReducer: ,
   },
 });
+
+
+console.log(store.dispatch(addTask("Bye ")))
