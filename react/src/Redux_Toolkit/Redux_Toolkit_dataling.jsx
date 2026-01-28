@@ -44,6 +44,7 @@
 // Handling async tasks, like fetching data, is much simpler with RTK’s createAsyncThunk. It automatically handles loading, success, and error states for you, so you don’t have to write all that manually.
 
 // Great Defaults:
+<<<<<<< Updated upstream
 // RTK sets up Redux DevTools, middleware, and other configuration for you, so you can focus on building your app instead of setup. 
 
 
@@ -59,3 +60,18 @@
 // Reducers that define how the state changes in response to actions.
 
 // Action creators automatically generated based on reducer names.
+=======
+// RTK sets up Redux DevTools, middleware, and other configuration for you, so you can focus on building your app instead of setup.
+
+
+//! Access Redux State in
+// React using useSelector
+
+// Use the useSelector hook to read data from the Redux store.
+
+// const count = useSelector(state => state.property);
+
+// Selector function: We define a selector function that takes the entire Redux
+// store state as an argument and returns the specific piece of data we need.
+
+>>>>>>> Stashed changes
